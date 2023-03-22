@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/ramadan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/ramadan"
+            android:textColor="@color/text_color"
+            android:textSize="32sp"
+            android:rotation="0"
+            app:layout_constraintBottom_toTopOf="@id/kareem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/kareem"
+            android:textColor="@color/text_color"
+            android:textSize="32sp"
+            android:rotation="0"
+            app:layout_constraintBottom_toTopOf="@id/start_animation"
+            app:layout_constraintEnd_toEndOf="@id/ramadan"
+            app:layout_constraintStart_toStartOf="@id/ramadan" />
+
+        <Constraint
+            android:id="@+id/swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/swipe"
+            android:textColor="@color/text_color"
+            android:textSize="28sp"
+            app:drawableEndCompat="@drawable/round_arrow_upward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_animation" />
+
+        <Constraint
+            android:id="@+id/start_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:rotation="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ramadan_animation" />
+
+        <Constraint
+            android:id="@+id/stars_moons"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:alpha="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/fawanes" />
+
+        <Constraint
+            android:id="@+id/pray_motion"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:alpha="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/pray_ramadan" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/ramadan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/ramadan"
+            android:textColor="@color/text_color"
+            android:textSize="32sp"
+            android:alpha="0.0"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@id/kareem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/kareem"
+            android:textColor="@color/text_color"
+            android:textSize="32sp"
+            android:alpha="0.0"
+            android:rotation="270"
+            app:layout_constraintBottom_toTopOf="@id/start_animation"
+            app:layout_constraintEnd_toEndOf="@id/ramadan"
+            app:layout_constraintStart_toStartOf="@id/ramadan" />
+
+        <Constraint
+            android:id="@+id/swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/swipe"
+            android:textColor="@color/text_color"
+            android:alpha="0"
+            android:textSize="28sp"
+            app:drawableEndCompat="@drawable/round_arrow_upward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/start_animation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:rotation="360"
+            app:lottie_rawRes="@raw/ramadan_animation" />
+
+        <Constraint
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:alpha="1"
+            android:backgroundTint="@color/text_color"
+            android:elevation="5dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Constraint
+            android:id="@+id/stars_moons"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:alpha="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/fawanes" />
+
+        <Constraint
+            android:id="@+id/pray_motion"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:alpha="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/pray_ramadan" />
+
+    </ConstraintSet>
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="3000">
+        <OnSwipe
+            app:touchAnchorId="@id/swipe"
+            app:dragDirection="dragUp"/>
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="25"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                />
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5"
+                />
+            <KeyPosition
+                app:framePosition="75"
+                app:motionTarget="@+id/swipe"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                />
+            <KeyAttribute
+                app:framePosition="25"
+                app:motionTarget="@+id/list_item"
+                android:alpha="0"/>
+
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@+id/list_item"
+                android:alpha="0.2"/>
+            <KeyAttribute
+                app:framePosition="60"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".4"/>
+            <KeyAttribute
+                app:framePosition="70"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".5"/>
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@+id/list_item"
+                android:alpha=".6"/>
+
+            <KeyAttribute
+                app:framePosition="10"
+                app:motionTarget="@+id/pray_motion"
+                android:alpha="0"/>
+            <KeyAttribute
+                app:framePosition="25"
+                app:motionTarget="@+id/pray_motion"
+                android:alpha="0"/>
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@+id/pray_motion"
+                android:alpha="0"/>
+            <KeyAttribute
+                app:framePosition="70"
+                app:motionTarget="@+id/pray_motion"
+                android:alpha="0.5"/>
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>

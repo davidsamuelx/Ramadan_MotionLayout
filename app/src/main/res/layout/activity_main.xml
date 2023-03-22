@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <TextView
+        android:id="@+id/ramadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/ramadan"
+        android:textColor="@color/text_color"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/kareem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/kareem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/kareem"
+        android:textColor="@color/text_color"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/start_animation"
+        app:layout_constraintEnd_toEndOf="@id/ramadan"
+        app:layout_constraintStart_toStartOf="@id/ramadan" />
+
+
+    <TextView
+        android:id="@+id/swipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/swipe"
+        android:textColor="@color/text_color"
+        android:textSize="28sp"
+        app:drawableEndCompat="@drawable/round_arrow_upward_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_animation" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/start_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramadan_animation" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/stars_moons"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/fawanes" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/pray_motion"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pray_ramadan" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:alpha="0"
+        android:backgroundTint="@color/text_color"
+        android:elevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="6dp"
+                android:text="@string/today_s_prayer_times"
+                android:textColor="#DE000000"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/fajr"
+                android:textColor="#99000000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/fajr"
+                app:layout_constraintStart_toStartOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/text1" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/dhuhr"
+                android:textColor="#99000000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/noun"
+                app:layout_constraintStart_toStartOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/text2" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/asr"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/asr"
+                app:layout_constraintStart_toStartOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/text3" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/maghrib"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/afternoon"
+                app:layout_constraintStart_toStartOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/text4" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/isha"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/isha"
+                app:layout_constraintStart_toStartOf="@id/text1"
+                app:layout_constraintTop_toBottomOf="@id/text5" />
+
+            <TextView
+                android:id="@+id/fajr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/_4_30_am"
+                android:textColor="#99000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text2" />
+
+            <TextView
+                android:id="@+id/dhuhr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/_12_03_pm"
+                android:textColor="#99000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text3" />
+
+            <TextView
+                android:id="@+id/asr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/_3_29_pm"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text4" />
+
+            <TextView
+                android:id="@+id/maghrib_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/_6_07_pm"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text5" />
+
+            <TextView
+                android:id="@+id/isha_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:fontFamily="@font/roboto"
+                android:padding="6dp"
+                android:text="@string/_7_25_pm"
+                android:textColor="#DE000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

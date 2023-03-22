@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ramadan MotionLayout</string>
+    <string name="ramadan">Ramadan</string>
+    <string name="swipe">Swipe</string>
+    <string name="kareem">Kareem</string>
+    <string name="today_s_prayer_times">Today\'s Prayer Times</string>
+    <string name="fajr">Fajr</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="isha">Isha</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="asr">Asr</string>
+    <string name="_4_30_am">4:30 AM</string>
+    <string name="_12_03_pm">12:03 PM</string>
+    <string name="_3_29_pm">3:29 PM</string>
+    <string name="_6_07_pm">6:07 PM</string>
+    <string name="_7_25_pm">7:25 PM</string>
+</resources>
